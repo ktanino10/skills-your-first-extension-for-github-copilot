@@ -36,7 +36,7 @@ app.post("/copilot", express.json(), async (req, res) => {
 
   // Add the agent job description to copilot's messages
   const jobDescription = await fs.readFile(
-    path.join(__dirname, "agent-knowledge", "job-description-ext.md"),
+    path.join(__dirname, "agent-knowledge", "job-description.md"),
     "utf8"
   );
   messages.unshift({
@@ -46,7 +46,7 @@ app.post("/copilot", express.json(), async (req, res) => {
 
   // Add the school overview to copilot's messages
   const schoolOverview = await fs.readFile(
-    path.join(__dirname, "agent-knowledge", "school-overview-ext.md"),
+    path.join(__dirname, "agent-knowledge", "school-overview.md"),
     "utf8"
   );
   messages.unshift({
@@ -56,7 +56,7 @@ app.post("/copilot", express.json(), async (req, res) => {
 
   // Add the staff descriptions to copilot's messages
   const staffDescriptions = await fs.readFile(
-    path.join(__dirname, "agent-knowledge", "staff-roles-ext.md"),
+    path.join(__dirname, "agent-knowledge", "staff-roles.md"),
     "utf8"
   );
   messages.unshift({
